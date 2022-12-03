@@ -1,13 +1,18 @@
 
+
 import os
 
-# insert directory to convert into folder variable
-folder = ''
+loc = input("What is the absolute path of the directory? ")
+old_ext = input("What is the previous file extension? ").removeprefix(".")
+new_ext = input("What would you like to change the extension to? ").removeprefix(".")
+folder = loc
+
 for filename in os.listdir(folder):
-    infilename = os.path.join(folder,filename)
-    if not os.path.isfile(infilename): continue
+    oldfilename = os.path.join(folder, filename)
+    if not os.path.isfile(oldfilename): continue
     oldbase = os.path.splitext(filename)
-    # replace first arg with current ext
-    # replace second arg with desired ext
-    newname = infilename.replace('.midi', '.mid')
-    output = os.rename(infilename, newname)
+    if not old_ext == oldbase[1].removeprefix("."): continue
+    newname = (oldbase[0]+"."+new_ext)   
+    newfilename = os.path.join(folder,newname)
+
+    output = os.rename(oldfilename, newfilename)
