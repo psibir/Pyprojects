@@ -5,9 +5,9 @@ This script will change the extension of files located in a directory as given b
 
 Run the script using 
 
-'''
-python extensionrenamer.py
-'''
+
+    python extensionrenamer.py
+
 
 Script will prompt the user for three inputs:
 
