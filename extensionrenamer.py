@@ -1,9 +1,9 @@
 
 import os
 
-folder = input("What is the absolute path of the directory? ")
-old_ext = input("What is the previous file extension? ").removeprefix(".")
-new_ext = input("What would you like to change the extension to? ").removeprefix(".")
+folder = input("Enter the absolute path of the directory containing files you wish to be changed: ")
+old_ext = input("Enter the previous file extension: ").removeprefix(".")
+new_ext = input("Enter the new file extension:  ").removeprefix(".")
 
 for filename in os.listdir(folder):
     oldfilename = os.path.join(folder, filename)
