@@ -1,5 +1,4 @@
 
-
 import os
 
 folder = input("What is the absolute path of the directory? ")
